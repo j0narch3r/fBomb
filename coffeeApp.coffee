@@ -1,6 +1,6 @@
 express = require 'express'
 routes = require './routes'
-newrelic = require 'newrelic'
+### newrelic = require 'newrelic' ###
 http = require 'http'
 path = require 'path'
 util = require 'util'
@@ -81,13 +81,13 @@ id = 0
 stream.on 'tweet', (tweet) ->
   if tweet.coordinates
     tweets.push {text: "@" + tweet.user.screen_name + " : " + tweet.text, coordinates: tweet.coordinates.coordinates, id:id++}
-    retweet tweet.user.screen_name, tweet.id_str, tweet.user.followers_count
+    ### retweet tweet.user.screen_name, tweet.id_str, tweet.user.followers_count ###
   else if tweet.place
     if tweet.place.bounding_box
       if tweet.place.bounding_box.type is 'Polygon'
         centerPoint tweet.place.bounding_box.coordinates[0], (center) ->
           tweets.push {text: "@" + tweet.user.screen_name + " : " + tweet.text, coordinates: center, id:id++}
-          retweet tweet.user.screen_name, tweet.id_str, tweet.user.followers_count
+          ### retweet tweet.user.screen_name, tweet.id_str, tweet.user.followers_count ###
       else
         console.log 'WTF_Place: ' + util.inspect tweet.place
     else
