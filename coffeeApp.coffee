@@ -55,10 +55,10 @@ app.configure 'production', ->
   app.use express.errorHandler()
 
 Twitter = new twit {
-  consumer_key: process.env.consumer_key,
-  consumer_secret: process.env.consumer_secret,
-  access_token: process.env.oauth_token,
-  access_token_secret: process.env.oauth_token_secret
+  consumer_key: "Y7oXngp2Ef4nqfczM2vGaA",
+  consumer_secret: "SHzys12htIXq3f6NE72XBal2uEcZviDGfFK1SA3pSg",
+  access_token: "21124143-jagMCpGZ7507QroTSCGqmNb3MMEei9K0jQQfcKK1U",
+  access_token_secret: "0jF0UYnxb4FPnjOz2V4pqEUn2B5QZIX5NKpTJNHAEuv2h"
 }
 
 # Temporary storage of tweets
