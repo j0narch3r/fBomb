@@ -3,7 +3,7 @@ bombs = []
 
 $(document).ready ->
   mapOptions =
-    zoom: 2
+    zoom: 3
     center: new google.maps.LatLng(5, -30)
     zoomControl: true
     disableDefaultUI: true
@@ -25,8 +25,8 @@ mapBomb = (text, coords) ->
   lat = coords[1]
   lng = coords[0]
   random = Math.random() * 100000
-  bombGif = '/img/fbomb.gif?'
-  signPost = '/img/signPost.png'
+  bombGif = '/img/bfly-small.gif?'
+  signPost = '/img/vbomb.png'
   bomb = new google.maps.Marker (
       position: new google.maps.LatLng lat, lng
       icon: bombGif + random
